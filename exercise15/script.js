@@ -49,11 +49,32 @@ function prequal(car) {
     return true;
 }
 
+var worthALook = prequal(taxi);
+if (worthALook) {
+    console.log("You should be interested in this " + taxi.make + " " + taxi.model);
+} else {
+    console.log("This " + taxi.make + taxi.model + " you can forgive this purchase");
+}
+
 var worthALook = prequal(cadi);
 if (worthALook) {
     console.log("You should be interested in this " + cadi.make + " " + cadi.model);
 } else {
     console.log("This " + cadi.make + " " + cadi.model + " you can forgive this purchase");
+}
+
+var worthALook = prequal(fiat);
+if (worthALook) {
+    console.log("You should be interested in this " + fiat.make + " " + fiat.model);
+} else {
+    console.log("This " + fiat.make + " " + fiat.model + " you can forgive this purchase");
+}
+
+var worthALook = prequal(chevy);
+if (worthALook) {
+    console.log("You should be interested in this " + chevy.make + " " + chevy.model);
+} else {
+    console.log("This " + chevy.make + " " + chevy.model + " you can forgive this purchase");
 }
 
 //console.log(fiat);
