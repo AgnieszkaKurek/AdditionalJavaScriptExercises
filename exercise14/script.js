@@ -30,19 +30,19 @@ console.log("The largest number of bubbles produced: " + highScore);
 var bestSolutions = getBestResult(scores, highScore);
 console.log("Liquids with the best result: " + bestSolutions);
 
-function getMostCostEffectiveSolution(scores, costs, highScore) {
-    var cost = 100;
-    var index;
-    for (var i = 0; i < scores.lengt; i++) {
-        if (scores[i] == highScore) {
-            if (cost > costs[i]) {
-                index = i;
-                cost = costs[i];
-            }
-        }
+// function getMostCostEffectiveSolution(scores, costs, highScore) {
+//     var cost = 100;
+//     var index;
+//     for (var i = 0; i < scores.lengt; i++) {
+//         if (scores[i] == highScore) {
+//             if (cost > costs[i]) {
+//                 index = i;
+//                 cost = costs[i];
+//             }
+//         }
 
-    }
-    return index;
-}
-var mostEffective = getMostCostEffectiveSolution(scores, costs, highScore);
-console.log("Liquid number " + mostEffective + " is most profitable.");
+//     }
+//     return index;
+// }
+// var mostEffective = getMostCostEffectiveSolution(scores, costs, highScore);
+// console.log("Liquid number " + mostEffective + " is most profitable.");
