@@ -24,16 +24,26 @@ var taxi = {
 make: "SieMoCorp",
 model: "Taxi",
 year: 1955,
-color: "pale blue",
+color: "yellow",
 passengers: 4,
 convertible: false,
 milage: 281341
 };
 
+function prequal(car) {
+    if (car.milage > 10000){
+        return false;
+    } else if (car.year > 1960) {
+        return false;
+    }
+    return true;
+}
 
-var miles = fiat.milage;
-if (miles < 2000){
-    buyIt();
+var worthALook = prequal(taxi);
+if (worthALook){
+    console.log("You should be interested in this " + taxi.make + " " + taxi.model);
+} else {
+    console.log("This " + taxi.make + taxi.model + " you can forgive this purchase");
 }
 
 //console.log(fiat);
