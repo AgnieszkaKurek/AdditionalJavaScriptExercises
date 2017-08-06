@@ -24,3 +24,5 @@ var miles = fiat.milage;
 if (miles < 2000){
     buyIt();
 }
+
+console.log(fiat);
