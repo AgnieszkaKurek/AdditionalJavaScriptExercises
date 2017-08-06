@@ -14,14 +14,18 @@ function printAndGetHighScore(scores) {
     }
     return highScore;
 }
+function getBestResult(scores, highScore) {
+    var bestSolutions = [];
+    for (var i = 0; i < scores.length; i++) {
+        if (scores[i] == highScore) {
+            bestSolutions.push(i);
+        }
+    }
+    return bestSolutions;
+}
 var highScore = printAndGetHighScore(scores);
 console.log("Number of tests: " + scores.length);
 console.log("The largest number of bubbles produced: " + highScore);
 
-var bestSolutions = [];
-for (var i = 0; i < scores.length; i++) {
-    if (scores[i] == highScore) {
-        bestSolutions.push(i);
-    }
-}
+var bestSolutions = getBestResult(scores, highScore);
 console.log("Liquids with the best result: " + bestSolutions);
