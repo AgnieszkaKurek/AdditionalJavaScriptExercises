@@ -20,9 +20,20 @@ convertible: false,
 milage: 88000
 };
 
+var taxi = {
+make: "SieMoCorp",
+model: "Taxi",
+year: 1955,
+color: "pale blue",
+passengers: 4,
+convertible: false,
+milage: 281341
+};
+
+
 var miles = fiat.milage;
 if (miles < 2000){
     buyIt();
 }
 
-console.log(fiat);
+//console.log(fiat);
