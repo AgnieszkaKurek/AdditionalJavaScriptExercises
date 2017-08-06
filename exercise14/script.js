@@ -1,8 +1,13 @@
 "use strict";
 
 var scores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51, 69, 64, 66, 55, 52, 44, 18, 41, 53, 55, 61, 51, 44];
-
-for (var i = 0; i < scores.length; i++){
-    var output = "Bubble fluid number " + i + " score: " + scores[i];
-    console.log(output);
+var highScore = 0;
+var output = 0;
+for (var i = 0; i < scores.length; i++) {
+    console.log("Bubble fluid number " + i + " score: " + scores[i]);
+    if (scores[i] > highScore) {
+        highScore = scores[i];
+    }
 }
+console.log("Number of tests: " + scores.length);
+console.log("The largest number of bubbles produced: " + highScore);
