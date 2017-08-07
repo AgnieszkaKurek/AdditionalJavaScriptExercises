@@ -80,34 +80,47 @@ var cadi = {
     passengers: 5,
     convertible: false,
     milage: 12892,
+    fuel: 0,
     started: false,
     start: function () {
+        if (this.fuel == 0) {
+            alert("Bak is empty!!Beat off before driving!!")
+        } else {
         this.started = true;
+        }
     },
     stop: function () {
         this.started = false;
     },
     drive: function () {
-        if (this.started) {
-            alert(this.make + " " + this.model + " move!!!")
-        } else {
-            alert("First you have to turn on the engine!!!")
+        if(this.started) {
+            if(this.fuel > 0){
+                alert(this.make + " " + this.model + " move!!!");
+                this.fuel = this.fuel - 1;
+            } else {
+                alert("No fuel!!");
+                this.stop();
+            } 
         }
+    },
+    addFuel: function(amount){
+        this.fuel = this.fuel + amount;
     }
 };
 
-chevy.start();
-chevy.drive();
-chevy.stop();
+// chevy.start();
+// chevy.drive();
+// chevy.stop();
 
-fiat.start();
-fiat.drive();
-fiat.stop();
+// fiat.start();
+// fiat.drive();
+// fiat.stop();
 
-taxi.start();
-taxi.drive();
-taxi.stop();
+// taxi.start();
+// taxi.drive();
+// taxi.stop();
 
 cadi.start();
 cadi.drive();
 cadi.stop();
+cadi.addFuel();
